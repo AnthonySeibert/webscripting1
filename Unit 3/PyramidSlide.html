@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="mario4.js"></script>
+    <style>
+
+        #pyramid {
+          line-height: 0;
+          font-size: 30px;
+          text-align: center;
+          background-color: #ECECEC; 
+          margin: 0px 100px;
+          padding: 25px 50px;
+          border-top-style: none;
+          border-right-style: solid;
+          border-bottom-style: solid;
+          border-left-style: solid;
+          border-width: 1px;
+          border-color: purple;            
+        }
+        h1 {
+          text-align: center;
+          background-color: purple;
+          color: white;
+          padding: 25px  50px ;
+        }
+        #input {
+          text-align: center;
+          background-color: #D3D3D3;
+          margin: 50px 100px 0px 100px;
+          padding: 25px 50px;
+          border-top-style: solid;
+          border-right-style: solid;
+          border-bottom-style: none;
+          border-left-style: solid;
+          border-width: 1px;
+          border-color: purple;
+        }
+    </style>
+</head>
+<nav>
+  <a href= "/index.html">Home</a>
+</nav>
+<body >
+    <h1>Pyramid Slide</h1>
+
+    
+
+    <div>
+      <div id= "input">
+        <b>Brick Symbol</b>
+        <select id="choice">
+          <option value='#'>#</option>
+          <option value='@'>@</option>
+          <option value='X'>X</option>
+          <option value='$'>$</option>
+        </select>
+        <b> &emsp; &emsp; How High?</b>
+        <input type="range" id="height" name="rangeInput" min="0" max="30"onchange="this.nextElementSibling.value = this.value" oninput="determineValueThenDrawPyramid()">
+        <output>30</output>
+      </div>
+
+      <div id="pyramid"></div>
+    </div>
+  
+</body>
+</html>
